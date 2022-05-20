@@ -1,4 +1,3 @@
-import { Counter } from './components/Counter';
 import { RepositoryList } from './components/repositoryList';
 import './style/global.scss';
 
