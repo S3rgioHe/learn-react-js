@@ -10,17 +10,12 @@ export function Counter() {
 
     return (
         <div>
-
             <h1>Counter</h1>
 
             <div style={{ display: 'flex' }}>
                 <h2>{counter}</h2>
-                <button type="button" onClick={() => increment(1)} style={{ padding: 10, margin: 4 }}>
-                    +
-                </button>
-                <button type="button" onClick={() => increment(-1)} style={{ padding: 10, margin: 4 }}>
-                    -
-                </button>
+                <button type="button" onClick={() => increment(1)} style={{ padding: 10, margin: 4 }}> + </button>
+                <button type="button" onClick={() => increment(-1)} style={{ padding: 10, margin: 4 }}> - </button>
             </div>
         </div>
     );
