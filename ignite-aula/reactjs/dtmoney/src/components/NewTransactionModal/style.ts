@@ -28,6 +28,21 @@ export const Container = styled.form`
             margin-top: 1rem;
         }
     }
+
+    button[type="submit"] {
+        width: 100%;
+        height: 4rem;               
+        border-radius: 0.25rem;
+        background: var(--green);
+        border: 0;
+        margin-top: 1.5rem;
+
+        transition: 0.2s;
+
+        &:hover {
+            filter: brightness(0.9);
+        }
+    }
 `;
 
 export const TransactionTypeContainer = styled.div`

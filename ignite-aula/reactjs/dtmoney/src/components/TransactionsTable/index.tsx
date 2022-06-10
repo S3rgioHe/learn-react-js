@@ -8,6 +8,7 @@ export function TransactionsTable() {
         api.get('transactions')
         .then(response => console.log(response.data))
     }, [])
+
     return (
         <Container>
             <table>
