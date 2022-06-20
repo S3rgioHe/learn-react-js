@@ -4,6 +4,7 @@ import closeImg from '../../assets/close.svg';
 import income from '../../assets/incomeImg.svg';
 import outcome from '../../assets/outcomeImg.svg';
 import { FormEvent, useState } from 'react';
+import { api } from '../services/api';
 
 interface NewTransactionModalProps {
     isOpen: boolean;
@@ -20,12 +21,14 @@ export function NewTransactionModal({ onRequestClose, isOpen }: NewTransactionMo
     function handleCreateNewTransaction(event: FormEvent) {
         event.preventDefault();
 
-        console.log(
+        const data = {
             title,
             type,
             value,
             category
-        );
+        };
+
+        api.post('/transactions', data);
         
         onRequestClose();
 
