@@ -2,11 +2,15 @@ import { Summary } from '../Summary'
 import { Container } from './style'
 import { TransactionsTable } from '../TransactionsTable'
 
-export function Dashboard() {
+interface DashboardProps {
+    isOpen: boolean;
+}
+
+export function Dashboard({ isOpen }: DashboardProps) {
     return (
     <Container>
         <Summary />
-        <TransactionsTable/>
+        <TransactionsTable isOpen={isOpen}/>
     </Container>
 
     )

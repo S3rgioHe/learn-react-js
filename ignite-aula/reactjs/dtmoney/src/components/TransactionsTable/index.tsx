@@ -11,13 +11,18 @@ interface Transaction {
     category: string;
     CreatedAt: string;
 }
-export function TransactionsTable() {
+
+interface TransactionTableProps {
+    isOpen: boolean;
+}
+
+export function TransactionsTable({ isOpen }: TransactionTableProps) {
     const [transactions, setTransactions] = useState<Transaction[]>([])
 
     useEffect(() => {
         api.get('transactions')
         .then(response => setTransactions(response.data.transactions))
-    }, [])
+    }, [isOpen])
 
     return (
         <Container>
