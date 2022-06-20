@@ -25,7 +25,8 @@ export function NewTransactionModal({ onRequestClose, isOpen }: NewTransactionMo
             title,
             type,
             value,
-            category
+            category,
+            CreatedAt: new Date().toISOString(),
         };
 
         api.post('/transactions', data);
